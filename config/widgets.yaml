@@ -1,0 +1,48 @@
+#---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/service-widgets
+
+- resources:
+    cpu: true
+    memory: true
+    expanded: true
+    cputemp: true
+    uptime: true
+    diskUnits: bytes # optional, bytes (default) or bbytes. Only applies to disk
+	
+	
+- glances:
+    url: http://edi.home:61208
+    username: glances
+    password: {{HOMEPAGE_VAR_GLANCES_PASSWORD}}
+    cpu: false
+    mem: false
+    expanded: true
+    disk:
+      - /
+      - /mnt/local_storage
+
+- resources:
+    expanded: true
+    disk:
+      - /mnt/4tb_volume
+      - /mnt/2tb_volume
+
+- search:
+    provider: duckduckgo
+    focus: true
+    target: _blank
+
+- openweathermap:
+    label: Yekaterinburg, RU
+    units: metric
+    apiKey: {{HOMEPAGE_VAR_OPENWEATHER_APIKEY}}
+    cache: 10
+
+- datetime:
+    text_size: sm
+    format:
+      dateStyle: long
+      timeStyle: short
+      hourCycle: h23
+

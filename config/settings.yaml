@@ -1,0 +1,32 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/settings
+
+title: Edi's Homepage
+favicon: images/edi_icon.ico
+  #background: images/ironforge.jpg
+
+  #fiveColumns: true
+headerStyle: boxedWidgets
+disableCollapse: true
+useEqualHeights: true
+language: en
+statusStyle: per-service
+  #providers:
+#  openweathermap: openweathermapapikey
+#  weatherapi: weatherapiapikey
+
+layout:
+  Network:
+    icon: mdi-network-pos
+    style: row
+    columns: 3
+  Virtualisation:
+    icon: mdi-docker
+    #style: row
+  Downloads:
+    icon: mdi-download-circle-outline
+    #style: row
+  Misc:
+    icon: mdi-home-automation
+    #style: column 

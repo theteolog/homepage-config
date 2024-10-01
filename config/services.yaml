@@ -1,0 +1,108 @@
+#---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/services
+#
+
+- Network:
+  - Wired Network:
+      widget:
+        type: glances
+        url: http://edi.home:61208
+        username: glances
+        password: {{HOMEPAGE_VAR_GLANCES_PASSWORD}}
+        metric: network:eno1
+        chart: true
+  - Wireless Network:
+      widget:
+        type: glances
+        url: http://edi.home:61208
+        username: edi
+        password: {{HOMEPAGE_VAR_GLANCES_PASSWORD}}
+        metric: network:wlp3s0
+        chart: true
+  - Docker Network:
+      widget:
+        type: glances
+        url: http://edi.home:61208
+        username: edi
+        password: {{HOMEPAGE_VAR_GLANCES_PASSWORD}}
+        metric: network:docker0
+        chart: true
+
+
+- Virtualisation:
+  - Portainer:
+      href: http://edi.home:9000
+      description: Docker web-ui
+      server: my-docker
+      container: portainer
+      icon: /icons/portainer.png
+      widget:
+        type: portainer
+        url: http://edi.home:9000
+        fields: ["running", "stopped", "total"]
+        env: 2
+        key: {{HOMEPAGE_VAR_PORTAINER_APIKEY}}
+
+  - Sons Of The Forest (under construction):
+      icon: /icons/sotf.png
+      widget:
+        type: gamedig
+        serverType: sonsoftheforest #in older versions
+          #serverType: sotf #in newest versions
+        fields: ["status", "currentPlayers", "maxPlayers", "ping"]
+        url: udp://edi.home:8766
+
+  - Core keeper:
+    #icon: /icons/sotf.png
+      widget:
+        type: gamedig
+        serverType: corekeeper
+        fields: ["status", "currentPlayers", "maxPlayers", "ping"]
+        url: udp://edi.home:27018
+
+
+- Downloads:
+  - Transmission:
+      href: http://edi.home:9091/
+      description: Transmission torrent client webui
+      icon: /icons/transmission.png
+      widget:
+        type: transmission
+        url: http://edi.home:9091
+        username: transmission
+        password: {{HOMEPAGE_VAR_TRANSMISSION_PASSWORD}}
+        fields: ["leech", "download", "seed", "upload"]
+        rpcUrl: /transmission/
+
+  - MySpeed:
+      href: http://edi.home:5216
+      server: my-docker
+      container: myspeed
+      icon: /icons/myspeed.png
+      widget:
+        type: myspeed
+        url: http://edi.home:5216
+
+  - Adguard:
+      href: http://edi.home:3001/
+      ping: http://edi.home:3001/
+      server: my-docker
+      container: adguard
+      icon: /icons/adguard.png
+      widget:
+        type: adguard
+        url: http://edi.home:3001/
+        username: edi
+        password: {{HOMEPAGE_VAR_ADGUARD_PASSWORD}}
+
+- Misc:
+    - Home Assistant:
+        href: http://edi.home:8123/
+        server: my-docker
+        container: homeassistant
+        icon: /icons/homeassistant.png
+        widget:
+          type: homeassistant
+          url: http://edi.home:8123
+          key: {{HOMEPAGE_VAR_HASS_APIKEY}}

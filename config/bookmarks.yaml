@@ -1,0 +1,21 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/bookmarks
+
+- Developer:
+    - Github:
+        - abbr: GH
+          href: https://github.com/theteolog/homepage-config
+
+- VPN:
+    - V2RayA:
+        - abbr: VA
+          href: http://edi.home:2017/
+    - Marzban:
+        - abbr: MA
+          href: http://teo-vpn:8000/dashboard/
+
+- Entertainment:
+    - YouTube:
+        - abbr: YT
+          href: https://youtube.com/
