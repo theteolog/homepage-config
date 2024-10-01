@@ -44,7 +44,7 @@
         env: 2
         key: {{HOMEPAGE_VAR_PORTAINER_APIKEY}}
 
-  - Sons Of The Forest (under construction):
+  - Sons Of The Forest:
       icon: /icons/sotf.png
       widget:
         type: gamedig
@@ -54,7 +54,7 @@
         url: udp://edi.home:8766
 
   - Core keeper:
-    #icon: /icons/sotf.png
+    icon: /icons/corekeeper.png
       widget:
         type: gamedig
         serverType: corekeeper

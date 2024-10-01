@@ -15,7 +15,13 @@
         - abbr: MA
           href: http://teo-vpn:8000/dashboard/
 
-- Entertainment:
-    - YouTube:
-        - abbr: YT
-          href: https://youtube.com/
+- Social:
+    - V220:
+        - abbr: V220
+          href: https://uk-mvolga.ru/
+    - S8UK:
+        - abbr: S8UK
+          href: http://www.ukgreen.ru/
+    - S8C:
+        - abbr: S8C
+          href: https://cabinet.rc-online.ru/sign_in
