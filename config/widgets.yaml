@@ -33,11 +33,11 @@
     focus: true
     target: _blank
 
-- openweathermap:
-    label: Yekaterinburg, RU
-    units: metric
-    apiKey: {{HOMEPAGE_VAR_OPENWEATHER_APIKEY}}
-    cache: 10
+#- openweathermap:
+#    label: Yekaterinburg, RU
+#    units: metric
+#    apiKey: {{HOMEPAGE_VAR_OPENWEATHER_APIKEY}}
+#    cache: 10
 
 - datetime:
     text_size: sm
@@ -45,4 +45,4 @@
       dateStyle: long
       timeStyle: short
       hourCycle: h23
-
+        

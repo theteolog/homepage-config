@@ -54,7 +54,7 @@
         url: udp://edi.home:8766
 
   - Core keeper:
-    icon: /icons/corekeeper.png
+      icon: /icons/corekeeper.png
       widget:
         type: gamedig
         serverType: corekeeper
