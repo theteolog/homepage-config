@@ -11,9 +11,12 @@
     - V2RayA:
         - abbr: VA
           href: http://edi.home:2017/
-    - Marzban:
-        - abbr: MA
-          href: http://teo-vpn:8000/dashboard/
+    - 3x-ui DE:
+        - abbr: DE
+          href: https://{{HOMEPAGE_VAR_DENODE_HOST}}:{{HOMEPAGE_VAR_DENODE_PORT}}/{{HOMEPAGE_VAR_DENODE_SEED}}/panel/
+    - 3x-ui RU:
+        - abbr: RU
+          href: https://{{HOMEPAGE_VAR_RUNODE_HOST}}:{{HOMEPAGE_VAR_RUNODE_PORT}}/{{HOMEPAGE_VAR_RUNODE_SEED}}/panel/
 
 - Home Management:
     - UK Volgogradskaya:

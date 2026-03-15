@@ -10,15 +10,15 @@
         url: http://edi.home:61208
         username: glances
         password: {{HOMEPAGE_VAR_GLANCES_PASSWORD}}
-        metric: network:eno1
+        metric: network:enp9s0
         chart: true
-  - Wireless Network:
+  - Bridged Network:
       widget:
         type: glances
         url: http://edi.home:61208
         username: edi
         password: {{HOMEPAGE_VAR_GLANCES_PASSWORD}}
-        metric: network:wlp3s0
+        metric: network:br0
         chart: true
   - Docker Network:
       widget:
@@ -48,24 +48,23 @@
       icon: /icons/sotf.png
       widget:
         type: gamedig
-        serverType: sonsoftheforest #in older versions
-          #serverType: sotf #in newest versions
+          #serverType: sonsoftheforest #in older versions
+        serverType: sotf #in newest versions
         fields: ["status", "currentPlayers", "maxPlayers", "ping"]
         url: udp://edi.home:8766
 
-  - Core keeper:
+  - Enshrouded:
       icon: /icons/corekeeper.png
       widget:
         type: gamedig
-        serverType: corekeeper
+        serverType: enshrouded
         fields: ["status", "currentPlayers", "maxPlayers", "ping"]
-        url: udp://edi.home:27018
-
+        url: udp://edi.home:15637
 
 - Downloads:
-  - Transmission:
-      href: http://edi.home:9091/
-      description: Transmission torrent client webui
+  - Flood over Transmission:
+      href: http://edi.home:3000/
+      description: Torrent client webui
       icon: /icons/transmission.png
       widget:
         type: transmission
@@ -82,27 +81,47 @@
       icon: /icons/myspeed.png
       widget:
         type: myspeed
+        fields: ["ping", "download", "upload"]
         url: http://edi.home:5216
 
-  - Adguard:
-      href: http://edi.home:3001/
-      ping: http://edi.home:3001/
-      server: my-docker
-      container: adguard
-      icon: /icons/adguard.png
+  - Scrutiny:
+      href: http://edi.home:8080
+      icon: /icons/scrutiny.png
       widget:
-        type: adguard
-        url: http://edi.home:3001/
-        username: edi
-        password: {{HOMEPAGE_VAR_ADGUARD_PASSWORD}}
+        type: scrutiny
+        url: http://edi.home:8080
 
 - Misc:
-    - Home Assistant:
-        href: http://edi.home:8123/
-        server: my-docker
-        container: homeassistant
-        icon: /icons/homeassistant.png
-        widget:
-          type: homeassistant
-          url: http://edi.home:8123
-          key: {{HOMEPAGE_VAR_HASS_APIKEY}}
+  - Home Assistant:
+     description: Still in develop
+     href: http://edi.home:8123/
+     server: my-docker
+     container: homeassistant
+     icon: /icons/homeassistant.png
+     widget:
+       type: homeassistant
+       url: http://edi.home:8123
+       key: {{HOMEPAGE_VAR_HASS_APIKEY}}
+
+  - Adguard:
+     href: http://edi.home:3001/
+     ping: http://edi.home:3001/
+     server: my-docker
+     container: adguard
+     icon: /icons/adguard.png
+     widget:
+       type: adguard
+       url: http://edi.home:3001/
+       username: edi
+       password: {{HOMEPAGE_VAR_ADGUARD_PASSWORD}}
+
+  - Mikrotik:
+      description: uhm... mikrotik?
+      href: http://192.168.1.1
+      icon: /icons/mikrotik.png
+      widget:
+        type: mikrotik
+        url: http://192.168.1.1
+        username: edi 
+        password: {{HOMEPAGE_VAR_ADGUARD_PASSWORD}}
+    

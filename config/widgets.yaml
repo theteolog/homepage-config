@@ -27,6 +27,7 @@
     disk:
       - /mnt/4tb_volume
       - /mnt/2tb_volume
+      - /mnt/8tb_volume
 
 - search:
     provider: duckduckgo
